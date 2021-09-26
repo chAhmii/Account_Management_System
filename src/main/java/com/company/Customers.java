@@ -17,6 +17,7 @@ public class Customers
         Phone_Number = null;
         SA_count = CA_count = 0;
         Account =  new Bank_Account();
+        
     }
     Boolean newAccount()
     {
@@ -24,6 +25,7 @@ public class Customers
     	int age;
     	System.out.println("What's Your age: ");
     	age =  sc.nextInt();
+    	sc.nextLine();   //Skip Escape Character
     	if(age >= 18 )
     	{
     		System.out.println("Now, You are opening your New Account: ");
@@ -45,9 +47,11 @@ public class Customers
             System.out.println("Enter Today's Date");
             this.Account.Date = sc.nextLine();
             sc.nextLine();   //Skip Escape Character
+            //For File writing 
+            DataBase obj = new DataBase();
+            obj.FileWriting(this);
             return true;
     	}
-    	
     	else
     	{
     		System.out.println("Sorry, You are not eligible for account openening because of under Age ");

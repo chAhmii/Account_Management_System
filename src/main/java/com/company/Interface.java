@@ -3,7 +3,7 @@ import java.util.*;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 
-public class Main {
+public class Interface {
     public static void main(String[] args) {
 	// write your code here
         Scanner sc =  new Scanner(System.in);
@@ -12,6 +12,7 @@ public class Main {
         {
             customer[i] = new Customers();
         }
+      
         //Displaying Menu
         while(true)
         {
